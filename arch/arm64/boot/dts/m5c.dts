@@ -256,35 +256,35 @@
 	};
 	CTP_pins_eint_as_int: eint@0 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO10__FUNC_GPIO10>;
+			pins = <PINMUX_GPIO62__FUNC_GPIO62>;
 			slew-rate = <0>;
 			bias-disable;
 		};
 	};
 	CTP_pins_eint_output0: eintoutput0 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO10__FUNC_GPIO10>;
+			pins = <PINMUX_GPIO62__FUNC_GPIO62>;
 			slew-rate = <1>;
 			output-low;
 		};
 	};
 	CTP_pins_eint_output1: eintoutput1 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO10__FUNC_GPIO10>;
+			pins = <PINMUX_GPIO62__FUNC_GPIO62>;
 			slew-rate = <1>;
 			output-high;
 		};
 	};
 	CTP_pins_rst_output0: rstoutput0 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO62__FUNC_GPIO62>;
+			pins = <PINMUX_GPIO10__FUNC_GPIO10>;
 			slew-rate = <1>;
 			output-low;
 		};
 	};
 	CTP_pins_rst_output1: rstoutput1 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO62__FUNC_GPIO62>;
+			pins = <PINMUX_GPIO10__FUNC_GPIO10>;
 			slew-rate = <1>;
 			output-high;
 		};
