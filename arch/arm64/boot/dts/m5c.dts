@@ -177,6 +177,11 @@
 		is_batch_supported_ps = <0>;
 		is_batch_supported_als = <0>;
 	};
+
+    fan5405@6a {
+		compatible = "mediatek,fan5405";
+		reg = <0x6a>;
+	};
 };
 
 /* sensor gpio standization */
