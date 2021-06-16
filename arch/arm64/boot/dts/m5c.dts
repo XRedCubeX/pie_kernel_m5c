@@ -8,7 +8,6 @@
 #else
 #include "mt6735m.dts"
 #endif
-#include <dt-bindings/lcm/otm9608_qhd_dsi_cmd.dtsi>
 
 
 &cpus {
@@ -725,6 +724,6 @@
 	status = "okay";
 };
 /* USB GPIO Kernal Standardization end */
-#include <k37mv1_64_bsp/cust.dtsi>
+#include <m5c/cust.dtsi>
 /*End of this file, DO NOT ADD ANYTHING HERE*/
 
