@@ -527,7 +527,7 @@ charging_hw_init, charging_dump_register, charging_enable, charging_set_cv_volta
 	    charging_get_power_source, charging_get_csdac_full_flag,
 	    charging_set_ta_current_pattern, charging_set_error_state};
 
-s32 fan5405_chr_control_interface(CHARGING_CTRL_CMD cmd, void *data)
+s32 chr_control_interface(CHARGING_CTRL_CMD cmd, void *data)
 {
 	s32 status;
 

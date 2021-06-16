@@ -45,11 +45,12 @@ ONTIM_DEBUG_DECLARE_AND_INIT(charge_ic, charge_ic, 8);
 static struct i2c_client *new_client;
 static const struct i2c_device_id fan5405_i2c_id[] = { {"fan5405", 0}, {} };
 
+kal_bool chargin_hw_init_done = KAL_FALSE;
 static int fan5405_driver_probe(struct i2c_client *client, const struct i2c_device_id *id);
 
 #ifdef CONFIG_OF
 static const struct of_device_id fan5405_of_match[] = {
-	{.compatible = "fan5405",},
+	{.compatible = "mediatek,fan5405",},
 	{},
 };
 
