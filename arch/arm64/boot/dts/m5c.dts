@@ -74,6 +74,7 @@
 		reg = <0x7F000000 0x1000000>;
 	};
 
+
 };
 
 &odm {
@@ -128,6 +129,15 @@
 };
 
 &i2c2 {
+
+	fan5405@6a {
+		compatible = "mediatek,fan5405";
+        pinctrl-names = "default", "fan5405_chr_enable_0", "fan5405_chr_enable_1";
+        pinctrl-0 = <&fan5405_gpio_pins_default>;
+        pinctrl-1 = <&fan5405_chr_gpio_pins_output0>;
+        pinctrl-2 = <&fan5405_chr_gpio_pins_output1>;
+	};
+
 /* start sensor */
 	gsensor@4c {
 		i2c_num = <2>;
@@ -177,15 +187,25 @@
 		is_batch_supported_ps = <0>;
 		is_batch_supported_als = <0>;
 	};
-
-    fan5405@6a {
-		compatible = "mediatek,fan5405";
-		reg = <0x6a>;
-	};
 };
-
 /* sensor gpio standization */
 &pio {
+    fan5405_gpio_pins_default: disp_gpiodefault {
+	};
+	fan5405_chr_gpio_pins_output0: chr@0 {
+	    pins_cmd_dat {
+			pins = <PINMUX_GPIO4__FUNC_GPIO4>;/*GPIO_FAN5405_CHR_PIN*/
+			slew-rate = <1>; /*direction 0:in, 1:out*/
+			output-low;/*direction out used only. output_low or high*/
+		};
+	};
+	fan5405_chr_gpio_pins_output1: chr@1 {
+	    pins_cmd_dat {
+			pins = <PINMUX_GPIO4__FUNC_GPIO4>;/*GPIO_FAN5405_CHR_PIN*/
+			slew-rate = <1>; /*direction 0:in, 1:out*/
+			output-high;/*direction out used only. output_low or high*/
+		};
+	};
 	alsps_intpin_cfg: alspspincfg {
 
 	    pins_cmd_dat {
