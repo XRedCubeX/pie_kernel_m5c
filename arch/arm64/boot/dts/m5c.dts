@@ -127,6 +127,14 @@
 	};
 };
 
+&i2c1 {
+
+    fan5405@6a {
+		compatible = "mediatek,fan5405";
+		reg = <0x6a>;
+	};
+};
+
 &i2c2 {
 /* start sensor */
 	gsensor@4c {
@@ -176,11 +184,6 @@
 		ps_threshold_low =  <28>;
 		is_batch_supported_ps = <0>;
 		is_batch_supported_als = <0>;
-	};
-
-    fan5405@6a {
-		compatible = "mediatek,fan5405";
-		reg = <0x6a>;
 	};
 };
 
